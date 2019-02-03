@@ -1,6 +1,7 @@
 # ZotIF
 plugin to add Impact Factors in Zotero database
 
+<h1>General description</h1>
 This plugin read a csv file containing Impact Factors and add them in the extra field of the reference
 The csv file must follow the following format:
 
@@ -48,8 +49,9 @@ A last remark. ZotIF does not make any checking on the values. This means you ca
   Alice in Wonderland,,4.2$<br/>
   I Married a Communist,,3.75$<br/>
 </pre>
+For the moment, the values are matched against the fields 'publicationTitle' and 'journalAbbreviation'. This means you have to populate these fields for ZotIF to get the prices. I will try to change the code to give you some flexibilities using extra settings.
 
-Usage
+<h1>Usage</h1>
 * Install as usual for Zotero plugins
 * Go to menu "Tools/Add-ons"
 * Click ZotIF "Preferences" button
@@ -70,9 +72,10 @@ You can adapt the prefix to whatever you like. For instance, in the previous exa
   &lt;text variable="IMPACT" prefix="Price = "/>
 </pre>
 
+<em>
 Have fun and report problems.
 This is my first Zotero extension and my first Javascript and xul program.
 I suppose there are many bugs.
 Part of the code has been borrowed from Zotero ZotFile plugin http://www.zotfile.com/
-
+</em>
   
