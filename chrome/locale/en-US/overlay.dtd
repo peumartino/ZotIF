@@ -1,0 +1,5 @@
+<!ENTITY zotero.zotif.update.label "Update IF">
+<!ENTITY zotero.zotif.updateAll.label "Update all IFs">
+<!ENTITY zotero.zotif.prefs.label "ZotIF preferences">
+<!ENTITY zotero.zotif.prefs.question "Please, enter the location of the csv text file containing the Impact Factors">
+<!ENTITY zotero.zotif.prefs.explain "The file must follow the format: journal,journal abbreviation,impact factor">

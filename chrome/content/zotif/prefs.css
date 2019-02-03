@@ -1,0 +1,19 @@
+
+#IFexample
+{
+  font-family: monospace;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.explain
+{
+  font-weight: bold;
+  font-size: large;
+}
+
+br
+{
+  display: block;
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://zotif/locale/overlay.dtd">
+
+<overlay
+    id="zotif"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script
+        type="application/x-javascript"
+        src="chrome://zotif/content/zotif.js"/>
+
+    <menupopup id="zotero-tb-actions-popup">
+        <menuitem
+            id="zotif-tb-actions-export-playground"
+            label="&zotero.zotif.updateAll.label;"
+            insertbefore="zotero-tb-actions-utilities-separator"
+            oncommand="Zotero.zotif.updateAll();"/>
+    </menupopup>
+
+    <popup id="zotero-collectionmenu">
+        <menuitem
+            id="zotero-collectionmenu-zotif"
+            label="&zotero.zotif.update.label;"
+            oncommand="Zotero.zotif.updateSelectedEntity()"/>
+    </popup>
+
+    <popup id="zotero-itemmenu" onpopupshowing="ZoteroPane.buildItemContextMenu();">
+        <menuitem
+            id="zotero-itemmenu-zotif"
+            label="&zotero.zotif.update.label;"
+            oncommand="Zotero.zotif.updateSelectedItems()"/>
+    </popup>
+</overlay>

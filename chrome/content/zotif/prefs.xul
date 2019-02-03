@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://zotif/content/prefs.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://zotif/locale/overlay.dtd">
+
+<prefwindow id="zotif-prefs" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <!-- <prefpane id="zotif-prefpane" label="&zotero.zotif.prefs.label;"> -->
+    <preferences>
+      <preference id="iffile" name="extensions.zotif.iffile" type="string"/>
+    </preferences>
+
+    <prefpane label="Enter filename" id="filename">
+    <vbox>
+      <description class="explain">&zotero.zotif.prefs.question;</description>
+      <description class="explain">&zotero.zotif.prefs.explain;</description>
+      <description id="IFexample">
+        <p>
+        CA-A CANCER JOURNAL FOR CLINICIANS,CA-CANCER J CLIN,244.585<br/>
+        NEW ENGLAND JOURNAL OF MEDICINE,NEW ENGL J MED,79.26<br/>
+        LANCET,LANCET,53.254<br/>
+        CHEMICAL REVIEWS,CHEM REV,52.613<br/>
+        Nature Reviews Materials,NAT REV MATER,51.941
+      </p>
+      </description>
+      <textbox id="iffile" preference="iffile" type="string" disabled="true"/>
+      <button id="iffile.input" label="Change path..." oncommand="var filename = Zotero.zotif.chooseFile(); if(filename != '') {document.getElementById('iffile').value='file://'.concat(filename); Zotero.zotif.resetPrefs();}"/>
+    </vbox>
+  </prefpane>
+
+  <!-- </prefpane> -->
+  <script src="chrome://zotero/content/include.js"/>
+</prefwindow>

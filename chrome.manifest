@@ -1,0 +1,4 @@
+content zotif chrome/content/zotif/
+locale  zotif  en-US   chrome/locale/en-US/
+
+overlay chrome://zotero/content/zoteroPane.xul chrome://zotif/content/overlay.xul
