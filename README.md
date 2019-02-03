@@ -49,9 +49,10 @@ A last remark. ZotIF does not make any checking on the values. This means you ca
   Alice in Wonderland,,4.2$<br/>
   I Married a Communist,,3.75$<br/>
 </pre>
-For the moment, the values are matched against the fields 'publicationTitle' and 'journalAbbreviation'. This means you have to populate these fields for ZotIF to get the prices. I will try to change the code to give you some flexibilities using extra settings.
+By default, the values are matched against the fields 'publicationTitle' and 'journalAbbreviation'. This is not the desired behavior and you should match against the 'title" field. You can do that in ZotIF advanced settings. <em>see below</em>
 
 <h1>Usage</h1>
+
 * Install as usual for Zotero plugins
 * Go to menu "Tools/Add-ons"
 * Click ZotIF "Preferences" button
@@ -71,6 +72,22 @@ You can adapt the prefix to whatever you like. For instance, in the previous exa
 <pre>
   &lt;text variable="IMPACT" prefix="Price = "/>
 </pre>
+
+<h1>Advanced configuration</h1>
+ZotIF has 2 settings that can be edited from the Zotero advanced configurator
+accessible in "Préferences...", tab "Advanced", button "Config Editor":
+<pre>
+"extensions.zotif.fields" = "publicationTitle,journalAbbreviation"
+"extensions.zotif.key" = "IMPACT:"
+</pre>
+extensions.zotif.fields contains a list of comma-separated Zotero fields. ZotIF will use these fields
+to find a match with the names declared in the csv file. The default value makes sens for Impact Factors
+since "publicationTitle,journalAbbreviation" correspond respectively to the journal name and its abbreviation.<br/>
+In the example above (a list of prices), you will presumably set this constant to "title" that is the title of the books in Zotero.<br/>
+
+extensions.zotif.key contains the keyword that will be added to the extra field. In the default case, we put "IMPACT: 12.345" for a journal with an Impact factor of 12.345. Again, in the above example with prices, you could set "extensions.zotif.key" = "PRICE:".
+Of course you must then adapt you csl style file and use &lt;text variable="PRICE" prefix="Price = "/><br/>
+
 
 <em>
 Have fun and report problems.
